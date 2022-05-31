@@ -1,0 +1,76 @@
+{
+  "materials": [
+    {
+      "id": 3911,
+      "imgURL": "https://cdn-icons-png.flaticon.com/512/3275/3275748.png",
+      "name": "walnut wood timber",
+      "type": "wood",
+      "quantity": "35",
+      "supplier": "forest king",
+      "note": "New note added"
+    },
+    {
+      "id": 1953,
+      "imgURL": "https://cdn-icons-png.flaticon.com/512/2823/2823606.png",
+      "name": "copper pipe",
+      "type": "metal",
+      "quantity": 5,
+      "supplier": "strongmetal company",
+      "note": "Praesent efficitur, nisi in pretium tincidunt, magna metus posuere lacus, eget."
+    },
+    {
+      "id": 5701,
+      "imgURL": "https://d1nhio0ox7pgb.cloudfront.net/_img/g_collection_png/standard/512x512/diamond.png",
+      "name": "diamond",
+      "type": "rock",
+      "quantity": 2,
+      "supplier": "shiningstar",
+      "note": ""
+    },
+    {
+      "id": 2832,
+      "imgURL": "https://cdn-icons-png.flaticon.com/512/1077/1077198.png",
+      "name": "tools",
+      "type": "misc",
+      "quantity": 6,
+      "supplier": "mrthor",
+      "note": "non ante tincidunt hendrerit eu ut turpis."
+    },
+    {
+      "id": 5562,
+      "imgURL": "https://cdn-icons-png.flaticon.com/512/842/842518.png",
+      "name": "safety helmet",
+      "type": "ppe",
+      "quantity": "16",
+      "supplier": "mrthor",
+      "note": ""
+    },
+    {
+      "id": 4244,
+      "imgURL": "",
+      "name": "Ruby",
+      "type": "rock",
+      "quantity": "10",
+      "supplier": "caveman",
+      "note": ""
+    },
+    {
+      "id": 2287,
+      "imgURL": "",
+      "name": "gold",
+      "type": "gold",
+      "quantity": "99",
+      "supplier": "shiningstar",
+      "note": "Praesent pretium arcu eget augue hendrerit rhoncus. Proin sed sodales magna, vulputate dapibus sapien. Praesent a mauris quis ante accumsan rhoncus ut et nulla."
+    },
+    {
+      "id": 1667,
+      "imgURL": "",
+      "name": "Silver",
+      "type": "silver",
+      "quantity": 0,
+      "supplier": "silvertown",
+      "note": ""
+    }
+  ]
+}

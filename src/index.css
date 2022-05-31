@@ -11,3 +11,68 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.app-title {
+  margin: 0 2.5%;
+  text-align: center;
+  background-color: rgb(235, 235, 235);
+}
+
+nav {
+  margin: 0 2.5%;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 10%;
+  padding: 10px;
+  background-color: rgb(235, 235, 235);
+}
+
+.search-filter-bar {
+  position: absolute;
+  right: 0;
+  margin-top: 5%;
+  margin-right: 2.5%;
+}
+
+.display-component {
+  padding: 2.5%;
+}
+
+.stock-manager-form {
+  margin: 20px auto;
+  padding: 30px;
+  width: fit-content;
+  display: flex;
+  flex-flow: column;
+  gap: 10px;
+  text-align: center;
+  border: solid .5px;
+}
+
+.table-header {
+  font-weight: bold;
+  background-color: rgb(220, 220, 220);
+}
+
+.stock-table, td {
+  padding: 10px;
+  border: solid .5px;
+  text-align: center;
+}
+
+.stock-detail {
+  border: solid .5px;
+  width: fit-content;
+  padding: 10px;
+}
+
+.contact-container {
+  display: flex;
+  gap: 20px;
+  flex-direction: row;
+}
+
+.contact-container div {
+  padding: 10px;
+  border: solid .5px;
+}
