@@ -4,15 +4,16 @@ const StockManagerSelector = () => {
     const navigateTo = useNavigate();
 
     const navigation = (e) => {
-        if (e.target.value === 'default') return null;
-        if (e.target.value === 'register') navigateTo('registernewstock');
-        if (e.target.value === 'edit') navigateTo('editstock');
-        if (e.target.value === 'delete') navigateTo('deletestock');
+        if (e.target.value === 'default') return null
+        if (e.target.value === 'register') navigateTo('registernewstock')
+        if (e.target.value === 'edit') navigateTo('editstock')
+        if (e.target.value === 'delete') navigateTo('deletestock')
     }
+    
 
     return (
         <div className='stock-manager-selector'>
-            <label><b>Stock Management</b> </label>
+            <label>I want to </label>
 
             <select onChange={navigation}>
                 <option value={'default'}>Please select</option>

@@ -3,7 +3,7 @@ export default function Contact() {
 
     return (
         <div className='display-component'>
-            <h2>Contact</h2>
+            <h3>Contact</h3>
             <div className='contact-container'>
                 <div>
                     <h3>Wood Department</h3>
