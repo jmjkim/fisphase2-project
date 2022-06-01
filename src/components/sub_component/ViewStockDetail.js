@@ -17,14 +17,15 @@ export default function ViewStockDetail() {
 
     return (
         <div className='display-component'>
-            <input type='button' onClick={() => navigateTo('/')} value='Back to Dashboard' />
+            <h3>Stock Detail</h3>
 
             <div className='stock-detail'>
-                <p>{stock.atname} ({stock.type})</p>
-                <img src={stock.imgURL} alt={stock.name} width={'200px'}/>
+                <p>{stock.name} ({stock.type})</p>
+                <img src={stock.imgURL} alt={stock.name} width={'100px'}/>
                 <p>Stock# {stock.id}</p>
                 <p>Supplier: {stock.supplier}</p>
                 <p>{stock.note}</p>
+                <input type='button' onClick={() => navigateTo('/')} value='Back to Dashboard' />
             </div>
         </div>
     );

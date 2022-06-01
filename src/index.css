@@ -21,7 +21,7 @@ code {
 nav {
   margin: 0 2.5%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   gap: 10%;
   padding: 10px;
   background-color: rgb(235, 235, 235);
@@ -35,6 +35,7 @@ nav {
 }
 
 .display-component {
+  text-align: center;
   padding: 2.5%;
 }
 
@@ -52,6 +53,7 @@ nav {
 .table-header {
   font-weight: bold;
   background-color: rgb(220, 220, 220);
+  white-space: nowrap;
 }
 
 .stock-table, td {
@@ -60,7 +62,13 @@ nav {
   text-align: center;
 }
 
+.stock-row-quantity-form {
+  padding-top: 10%;
+}
+
 .stock-detail {
+  margin: 0 auto;
+  text-align: center;
   border: solid .5px;
   width: fit-content;
   padding: 10px;

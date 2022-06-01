@@ -5,7 +5,7 @@
       "imgURL": "https://cdn-icons-png.flaticon.com/512/3275/3275748.png",
       "name": "walnut wood timber",
       "type": "wood",
-      "quantity": 13,
+      "quantity": 55,
       "supplier": "forest king",
       "note": "New note added"
     },
@@ -14,7 +14,7 @@
       "imgURL": "https://cdn-icons-png.flaticon.com/512/2823/2823606.png",
       "name": "copper pipe",
       "type": "metal",
-      "quantity": 5,
+      "quantity": 46,
       "supplier": "strongmetal company",
       "note": "Praesent efficitur, nisi in pretium tincidunt, magna metus posuere lacus, eget."
     },
@@ -59,7 +59,7 @@
       "imgURL": "",
       "name": "gold",
       "type": "gold",
-      "quantity": "99",
+      "quantity": 67,
       "supplier": "shiningstar",
       "note": "Praesent pretium arcu eget augue hendrerit rhoncus. Proin sed sodales magna, vulputate dapibus sapien. Praesent a mauris quis ante accumsan rhoncus ut et nulla."
     }
