@@ -1,5 +1,5 @@
 body {
-  margin: 0;
+  margin: 0 2.5%;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -12,37 +12,27 @@ code {
     monospace;
 }
 
-.app-title {
-  margin: 0 2.5%;
-  text-align: center;
-  background-color: rgb(235, 235, 235);
-}
-
 nav {
-  margin: 0 2.5%;
   display: flex;
-  justify-content: space-around;
-  gap: 10%;
-  padding: 10px;
+  justify-content: space-between;
+  align-items: center;
   background-color: rgb(235, 235, 235);
 }
 
 .search-filter-bar {
   position: absolute;
   right: 0;
-  margin-top: 5%;
   margin-right: 2.5%;
 }
 
-.display-component {
-  text-align: center;
-  padding: 2.5%;
+.display-content {
+  margin-top: 2.5%;
 }
 
 .stock-manager-form {
-  margin: 20px auto;
-  padding: 30px;
-  width: fit-content;
+  margin: 30px auto;
+  width: 20%;
+  padding: 10px;
   display: flex;
   flex-flow: column;
   gap: 10px;
@@ -70,14 +60,14 @@ nav {
   margin: 0 auto;
   text-align: center;
   border: solid .5px;
-  width: fit-content;
+  width: 50%;
   padding: 10px;
 }
 
 .contact-container {
+  text-align: center;
   display: flex;
   gap: 20px;
-  flex-direction: row;
 }
 
 .contact-container div {

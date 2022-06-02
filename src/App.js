@@ -1,4 +1,5 @@
 import { Routes, Route } from "react-router-dom"
+
 import NavBar from './components/NavBar';
 import Dashboard from './components/Dashboard';
 import Contact from './components/Contact';
@@ -9,7 +10,7 @@ import DeleteForm from "./components/sub_component/forms/DeleteForm";
 
 import ViewStockDetail from './components/sub_component/ViewStockDetail';
 
-export default function App() {
+const App = () => {
   return (
     <div>
       <NavBar />
@@ -24,3 +25,5 @@ export default function App() {
     </div>
   );
 }
+
+export default App;

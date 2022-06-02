@@ -1,8 +1,8 @@
 import StockRowDetail from './sub_component/StockRowDetail';
 
-export default function StockDisplayer ({ filteredStocks, setNewQuantity, handleQuantitySubmit }) {
+const StockDisplayer = ({ filteredStocks, setNewQuantity, handleQuantitySubmit }) => {
     return (
-        <div className='display-component'>
+        <div className='display-content'>
             <h3>List of Stocks</h3>
  
             <table>
@@ -18,13 +18,17 @@ export default function StockDisplayer ({ filteredStocks, setNewQuantity, handle
                         <td>Note</td>
                     </tr>
                 </thead>
+
                 <tbody>
                     {filteredStocks.map((stock, key) => <StockRowDetail key={key}
                                                                         stock={stock} 
                                                                         setNewQuantity={setNewQuantity} 
                                                                         handleQuantitySubmit={handleQuantitySubmit} />)}
                 </tbody>
+                
             </table>
         </div>
     );
 }
+
+export default StockDisplayer;

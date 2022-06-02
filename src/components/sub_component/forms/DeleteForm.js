@@ -27,16 +27,16 @@ const DeleteForm = () => {
 
 
     return (
-        <div>
+        <form className='stock-manager-form' onSubmit={handleDeleteSubmit}>
+            <h3>Delete Stock</h3>
 
-            <form className='stock-manager-form' onSubmit={handleDeleteSubmit}>
-                <h3>Delete Stock</h3>
+            <StockPreview stock={stock} />
 
-                <StockPreview stock={stock} />
-                <input type='text' name='id' onChange={handleIDChange} maxLength={4} placeholder='Stock#'></input>
-                <input type='submit' value='Delete'></input>
-            </form>
-        </div>
+            <input type='text' name='id' onChange={handleIDChange} maxLength={4} placeholder='Stock#'></input>
+            <input type='submit' value='Delete'></input>
+            
+            <input type='button' onClick={() => navigateTo('/')} value='Back to Dashboard'></input>
+        </form>
     );
 }
 

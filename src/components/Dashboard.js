@@ -3,8 +3,8 @@ import { useState, useEffect } from 'react';
 import SearchFilterBar from './sub_component/SearchFilterBar';
 import StockDisplayer from './StockDisplayer';
 
-export default function Dashboard() {
-  document.title = 'Dashboard';
+const Dashboard = () => {
+  document.title = 'Inventory Manager';
 
   const [stocks, setStocks] = useState([]);
   const [newQuantity, setNewQuantity] = useState(0);
@@ -52,3 +52,5 @@ export default function Dashboard() {
       </div>
     )
 };
+
+export default Dashboard;

@@ -1,16 +1,19 @@
 import { Link } from "react-router-dom";
 import StockManagerSelector from "./sub_component/StockManagerSelector";
 
-export default function NavBar() {
+const NavBar = () => {
     return (
         <div>
-            <h1 className='app-title'>Inventory Manager</h1>
-
             <nav>
-                <Link to="/" style={{ 'textDecoration': 'none' }}>Dashboard</Link>
-                <Link to="contact" style={{ 'textDecoration': 'none' }}>Contact</Link>
+                <h2>Inventory Manager</h2>
+
+                <Link to="/" style={{ 'fontWeight': 'bold', 'textDecoration': 'none' }}>Dashboard</Link>
+                <Link to="contact" style={{ 'fontWeight': 'bold', 'textDecoration': 'none' }}>Contact</Link>
+                
                 <StockManagerSelector />
             </nav>
         </div>
     );
 }
+
+export default NavBar;

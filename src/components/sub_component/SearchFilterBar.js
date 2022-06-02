@@ -1,4 +1,4 @@
-export default function SearchFilterBar ({ types, suppliers, setFilterByID, setFilterByType, setFilterBySupplier }) {
+const SearchFilterBar = ({ types, suppliers, setFilterByID, setFilterByType, setFilterBySupplier }) => {
     return (
         <div className='search-filter-bar'>
             <label>Search By: </label>
@@ -21,3 +21,5 @@ export default function SearchFilterBar ({ types, suppliers, setFilterByID, setF
         </div>
     );
 }
+
+export default SearchFilterBar;
