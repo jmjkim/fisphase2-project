@@ -25,19 +25,16 @@ nav {
   margin-right: 2.5%;
 }
 
-.display-content {
-  margin-top: 2.5%;
-}
-
 .stock-manager-form {
+  display: flex;
+  flex-flow: column;
   margin: 30px auto;
   width: 20%;
   padding: 10px;
-  display: flex;
-  flex-flow: column;
   gap: 10px;
   text-align: center;
   border: solid .5px;
+  border-radius: 10px;
 }
 
 .table-header {
@@ -48,29 +45,33 @@ nav {
 
 .stock-table, td {
   padding: 10px;
-  border: solid .5px;
   text-align: center;
+  border: solid .5px;
 }
 
 .stock-row-quantity-form {
-  padding-top: 10%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
 }
 
 .stock-detail {
   margin: 0 auto;
-  text-align: center;
-  border: solid .5px;
   width: 50%;
   padding: 10px;
+  text-align: center;
+  border: solid .5px;
+  border-radius: 10px;
 }
 
 .contact-container {
-  text-align: center;
   display: flex;
   gap: 20px;
+  text-align: center;
 }
 
 .contact-container div {
   padding: 10px;
   border: solid .5px;
+  border-radius: 10px;
 }

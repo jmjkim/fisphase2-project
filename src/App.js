@@ -12,17 +12,17 @@ import ViewStockDetail from './components/sub_component/ViewStockDetail';
 
 const App = () => {
   return (
-    <div>
+    <>
       <NavBar />
       <Routes>
         <Route exact path='/' element={<Dashboard />} />
+        <Route exact path='contact' element={<Contact />} />
+        <Route exact path='viewstockdetail/:stockID' element={<ViewStockDetail />} />
         <Route exact path='registernewstock' element={<RegisterForm />} />
         <Route exact path='editstock' element={<EditorForm />} />
         <Route exact path='deletestock' element={<DeleteForm />} />
-        <Route exact path='viewstockdetail/:stockID' element={<ViewStockDetail />} />
-        <Route exact path='contact' element={<Contact />} />
       </Routes>
-    </div>
+    </>
   );
 }
 

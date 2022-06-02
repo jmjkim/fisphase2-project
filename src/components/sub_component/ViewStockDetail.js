@@ -4,10 +4,11 @@ import { useNavigate, useParams } from 'react-router-dom';
 const ViewStockDetail = () => {
     document.title = 'Stock Detail'
 
+    const [stock, setStock] = useState([]);
     const navigateTo = useNavigate();
     const {stockID} = useParams();
-    const [stock, setStock] = useState([]);
     
+
     useEffect(() => {
         fetch(`http://localhost:3000/materials/${stockID}`)
         .then(r => r.json())
@@ -15,8 +16,9 @@ const ViewStockDetail = () => {
         .catch(err => alert(err.message))
     }, [])
 
+    
     return (
-        <div className='display-content'>
+        <>
             <div className='stock-detail'>
                 <h3>Stock Detail</h3>
 
@@ -27,7 +29,7 @@ const ViewStockDetail = () => {
                 
                 <input type='button' onClick={() => navigateTo('/')} value='Back to Dashboard' />
             </div>
-        </div>
+        </>
     );
 }
 

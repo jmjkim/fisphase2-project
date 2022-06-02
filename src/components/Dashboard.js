@@ -3,9 +3,10 @@ import { useState, useEffect } from 'react';
 import SearchFilterBar from './sub_component/SearchFilterBar';
 import StockDisplayer from './StockDisplayer';
 
+
 const Dashboard = () => {
   document.title = 'Inventory Manager';
-
+  
   const [stocks, setStocks] = useState([]);
   const [newQuantity, setNewQuantity] = useState(0);
   const [filterByID, setFilterByID] = useState(0);
@@ -27,7 +28,9 @@ const Dashboard = () => {
   const handleQuantitySubmit = (e, targetStock) => {
     e.preventDefault();
 
+
     const newStocks = [...stocks].map(stock => stock.id === targetStock.id ? {...stock, quantity: newQuantity} : stock); 
+
 
     fetch(`http://localhost:3000/materials/${targetStock.id}`, {
         method: "PATCH",
@@ -47,10 +50,10 @@ const Dashboard = () => {
 
     return (
       <div>
-        <SearchFilterBar types={types} suppliers={suppliers} setFilterByID={setFilterByID} setFilterByType={setFilterByType} setFilterBySupplier={setFilterBySupplier} />
-        <StockDisplayer filteredStocks={filteredStocks} setNewQuantity={setNewQuantity} handleQuantitySubmit={handleQuantitySubmit} />
+          <SearchFilterBar types={types} suppliers={suppliers} setFilterByID={setFilterByID} setFilterByType={setFilterByType} setFilterBySupplier={setFilterBySupplier} />
+          <StockDisplayer filteredStocks={filteredStocks} setNewQuantity={setNewQuantity} handleQuantitySubmit={handleQuantitySubmit} />
       </div>
-    )
+    );
 };
 
 export default Dashboard;

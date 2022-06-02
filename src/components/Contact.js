@@ -2,7 +2,7 @@ const Contact = () => {
     document.title = "Contact"
 
     return (
-        <div className='display-content'>
+        <>
             <h3>Contact</h3>
             
             <div className='contact-container'>
@@ -30,7 +30,7 @@ const Contact = () => {
                     <a href='mailto:generalquestions@companyemail.com'>generalquestions@companyemail.com</a>
                 </div>
             </div>
-        </div>
+        </>
     );
 };
 

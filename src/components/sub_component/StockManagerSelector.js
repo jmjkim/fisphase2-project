@@ -16,10 +16,10 @@ const StockManagerSelector = () => {
             <label>I want to </label>
 
             <select onChange={(e) => {
-                handleChange(e);
-                
-                return e.target.value = 'default'
+                    handleChange(e);
+                    return e.target.value = 'default'
                 }}>
+
                 <option value={'default'}>Please select</option>
                 <option value={'register'}>Register new stock</option>
                 <option value={'edit'}>Edit stock</option>

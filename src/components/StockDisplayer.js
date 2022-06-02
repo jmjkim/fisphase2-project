@@ -2,7 +2,7 @@ import StockRowDetail from './sub_component/StockRowDetail';
 
 const StockDisplayer = ({ filteredStocks, setNewQuantity, handleQuantitySubmit }) => {
     return (
-        <div className='display-content'>
+        <>
             <h3>List of Stocks</h3>
  
             <table>
@@ -12,7 +12,7 @@ const StockDisplayer = ({ filteredStocks, setNewQuantity, handleQuantitySubmit }
                         <td>Image</td>
                         <td>Name</td>
                         <td>Type</td>
-                        <td>Quantity</td>
+                        <td>Quantity (max 100)</td>
                         <td>Supplier</td>
                         <td>In-stock</td>
                         <td>Note</td>
@@ -20,14 +20,11 @@ const StockDisplayer = ({ filteredStocks, setNewQuantity, handleQuantitySubmit }
                 </thead>
 
                 <tbody>
-                    {filteredStocks.map((stock, key) => <StockRowDetail key={key}
-                                                                        stock={stock} 
-                                                                        setNewQuantity={setNewQuantity} 
-                                                                        handleQuantitySubmit={handleQuantitySubmit} />)}
+                    {filteredStocks.map((stock, key) => <StockRowDetail key={key} stock={stock} setNewQuantity={setNewQuantity} handleQuantitySubmit={handleQuantitySubmit} />)}
                 </tbody>
                 
             </table>
-        </div>
+        </>
     );
 }
 
