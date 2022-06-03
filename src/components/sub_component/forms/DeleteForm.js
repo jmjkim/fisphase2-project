@@ -8,7 +8,7 @@ const DeleteForm = () => {
     const [stock, setStock] = useState(null);
 
     const handleIDChange = (e) => {
-        fetch(`http://localhost:3000/materials/${+e.target.value}`)
+        fetch(`https://fisphase2-project-database.herokuapp.com/materials/${+e.target.value}`)
         .then(r => r.json())
         .then(setStock)
         .catch(err => alert(err.message))
@@ -18,7 +18,7 @@ const DeleteForm = () => {
     const handleDeleteSubmit = (e) => {
         e.preventDefault();
 
-        fetch(`http://localhost:3000/materials/${stock.id}`, {
+        fetch(`https://fisphase2-project-database.herokuapp.com/materials/${stock.id}`, {
             method: "DELETE"
         })
         .then(() => navigateTo('/'))

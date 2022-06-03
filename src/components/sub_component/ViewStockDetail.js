@@ -10,7 +10,7 @@ const ViewStockDetail = () => {
     
 
     useEffect(() => {
-        fetch(`http://localhost:3000/materials/${stockID}`)
+        fetch(`https://fisphase2-project-database.herokuapp.com/materials/${stockID}`)
         .then(r => r.json())
         .then(setStock)
         .catch(err => alert(err.message))

@@ -10,7 +10,7 @@ const EditorForm = () => {
 
 
     const handleIDChange = (e) => {
-        fetch(`http://localhost:3000/materials/${+e.target.value}`)
+        fetch(`https://fisphase2-project-database.herokuapp.com/materials/${+e.target.value}`)
         .then(r => r.json())
         .then(stock => {
             setStock(stock);
@@ -31,7 +31,7 @@ const EditorForm = () => {
     const handleEditSubmit = (e) => {
         e.preventDefault();
         
-        fetch(`http://localhost:3000/materials/${stock.id}`, {
+        fetch(`https://fisphase2-project-database.herokuapp.com/materials/${stock.id}`, {
             method: 'PATCH',
             headers: {
               'Content-Type': 'application/json'

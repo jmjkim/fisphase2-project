@@ -26,7 +26,7 @@ const RegisterForm = () => {
     const handleRegisterSubmit = (e) => {
         e.preventDefault()
         
-        fetch('http://localhost:3000/materials/', {
+        fetch('https://fisphase2-project-database.herokuapp.com/materials', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json'

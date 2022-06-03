@@ -18,7 +18,7 @@ const Dashboard = () => {
 
 
   useEffect(() => {
-    fetch('http://localhost:3000/materials')
+    fetch('https://fisphase2-project-database.herokuapp.com/materials')
     .then(r => r.json())
     .then(setStocks)
     .catch(err => alert(err.message))
@@ -32,7 +32,7 @@ const Dashboard = () => {
     const newStocks = [...stocks].map(stock => stock.id === targetStock.id ? {...stock, quantity: newQuantity} : stock); 
 
 
-    fetch(`http://localhost:3000/materials/${targetStock.id}`, {
+    fetch(`https://fisphase2-project-database.herokuapp.com/materials/${targetStock.id}`, {
         method: "PATCH",
         headers: {'Content-type': 'application/json'},
         body: JSON.stringify({quantity: newQuantity})
