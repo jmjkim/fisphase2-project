@@ -4,4 +4,5 @@ React project in-progress..
 
 Resources
 
-Images: Flaticon
+Back-End Setting: JSON-Server, Heroku
+Stock Images: Flaticon
