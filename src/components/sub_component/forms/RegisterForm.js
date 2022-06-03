@@ -40,7 +40,7 @@ const RegisterForm = () => {
 
 
     return (
-        <form className='stock-manager-form' onSubmit={handleRegisterSubmit}>
+        <form className='stock-manager-form' onSubmit={handleRegisterSubmit} data-netflify='true'>
             <h3>Register New Stock</h3>
             <input type='text' name='name' onChange={handleRegisterChange} placeholder='Stock Name' />
             <input type='text' name='type' onChange={handleRegisterChange} placeholder='Type' />
