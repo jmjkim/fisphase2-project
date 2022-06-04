@@ -29,7 +29,7 @@ const Dashboard = () => {
     e.preventDefault();
 
 
-    const newStocks = [...stocks].map(stock => stock.id === targetStock.id ? {...stock, quantity: newQuantity} : stock); 
+    const newStocks = stocks.map(stock => stock.id === targetStock.id ? {...stock, quantity: newQuantity} : stock); 
 
 
     fetch(`https://fisphase2-project-database.herokuapp.com/materials/${targetStock.id}`, {
