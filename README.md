@@ -9,7 +9,7 @@ Inventory Manager is a React project (Single Page Application) for my software e
 This is my second software engineering project at Flatiron School. Throughout this project, I was able to understand the basic part of wep applications such as process of UI transformation in the browser, web app platform structure and how JavaScript can become flexible with a remarkable library, React. 
 
 
-## Application Features
+## Features
 - A dropdown menu on right upper corner `I want to: [Please Select]` where users can select options to create, edit, delete inventory.
 
 - Search / Filter bar where users can search particular stock by its ID or filter stocks by its type or supplier.
