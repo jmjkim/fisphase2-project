@@ -47,3 +47,6 @@ This is my second software engineering project at Flatiron School. Throughout th
 
 
 For any questions, feedbacks, send email at jmjkim00@icloud.com.
+
+
+# A walkthrough video link Coming Soon
