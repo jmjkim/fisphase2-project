@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 
 import SearchFilterBar from './sub_component/SearchFilterBar';
 import StockDisplayer from './StockDisplayer';
+import StockRowDetail from './components/sub_component/StockRowDetail';
 
 
 const Dashboard = () => {
@@ -29,7 +30,7 @@ const Dashboard = () => {
     e.preventDefault();
 
 
-    const newStocks = stocks.map(stock => stock.id === targetStock.id ? {...stock, quantity: newQuantity} : stock); 
+    const newStocks = [...stocks].map(stock => stock.id === targetStock.id ? {...stock, quantity: newQuantity} : stock); 
 
 
     fetch(`https://fisphase2-project-database.herokuapp.com/materials/${targetStock.id}`, {
@@ -51,7 +52,7 @@ const Dashboard = () => {
     return (
       <div>
           <SearchFilterBar types={types} suppliers={suppliers} setFilterByID={setFilterByID} setFilterByType={setFilterByType} setFilterBySupplier={setFilterBySupplier} />
-          <StockDisplayer filteredStocks={filteredStocks} setNewQuantity={setNewQuantity} handleQuantitySubmit={handleQuantitySubmit} />
+          <StockDisplayer filteredStocks={filteredStocks.map((stock, key) => <StockRowDetail key={key} stock={stock} setNewQuantity={setNewQuantity} handleQuantitySubmit={handleQuantitySubmit} />)} />
       </div>
     );
 };

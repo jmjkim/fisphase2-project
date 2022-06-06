@@ -1,6 +1,4 @@
-import StockRowDetail from './sub_component/StockRowDetail';
-
-const StockDisplayer = ({ filteredStocks, setNewQuantity, handleQuantitySubmit }) => {
+const StockDisplayer = ({ filteredStocks }) => {
     return (
         <>
             <h3>List of Stocks</h3>
@@ -20,7 +18,7 @@ const StockDisplayer = ({ filteredStocks, setNewQuantity, handleQuantitySubmit }
                 </thead>
 
                 <tbody>
-                    {filteredStocks.map((stock, key) => <StockRowDetail key={key} stock={stock} setNewQuantity={setNewQuantity} handleQuantitySubmit={handleQuantitySubmit} />)}
+                    {filteredStocks}
                 </tbody>
                 
             </table>
