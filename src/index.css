@@ -49,6 +49,10 @@ nav {
   border: solid .5px;
 }
 
+.stock-row {
+  width: fit-content;
+}
+
 .stock-row-quantity-form {
   display: flex;
   flex-direction: column;
