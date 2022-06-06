@@ -42,12 +42,14 @@ const RegisterForm = () => {
     return (
         <form className='stock-manager-form' onSubmit={handleRegisterSubmit} data-netflify='true'>
             <h3>Register New Stock</h3>
+
             <input type='text' name='name' onChange={handleRegisterChange} placeholder='Stock Name' />
             <input type='text' name='type' onChange={handleRegisterChange} placeholder='Type' />
             <input type='number' name='quantity' min={1} max={100} onChange={handleRegisterChange} placeholder='Quantity'/>
             <input type='text' name='supplier' onChange={handleRegisterChange} placeholder='Supplier' />
             <input type='url' name='imgURL' onChange={handleRegisterChange} placeholder='Image URL' />
             <input type='text' name='note' onChange={handleRegisterChange} placeholder='Add note' />
+
             <input type='submit' value='Register' />
             <input type='button' onClick={() => navigateTo('/')} value='Back to Dashboard'></input>
         </form>

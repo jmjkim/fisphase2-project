@@ -5,6 +5,7 @@ const ViewStockDetail = () => {
     document.title = 'Stock Detail'
 
     const [stock, setStock] = useState([]);
+    
     const navigateTo = useNavigate();
     const {stockID} = useParams();
     
