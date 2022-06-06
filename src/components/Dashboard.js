@@ -2,21 +2,24 @@ import { useState, useEffect } from 'react';
 
 import SearchFilterBar from './sub_component/SearchFilterBar';
 import StockDisplayer from './StockDisplayer';
-import StockRowDetail from './components/sub_component/StockRowDetail';
 
 
 const Dashboard = () => {
   document.title = 'Inventory Manager';
-  
+
+
   const [stocks, setStocks] = useState([]);
   const [newQuantity, setNewQuantity] = useState(0);
+  
+  
   const [filterByID, setFilterByID] = useState(0);
   const [filterByType, setFilterByType] = useState('all');
   const [filterBySupplier, setFilterBySupplier] = useState('all');
-
+  
+  
   const types = [...stocks].map(stock => stock.type);
   const suppliers = [...stocks].map(stock => stock.supplier);
-
+  
 
   useEffect(() => {
     fetch('https://fisphase2-project-database.herokuapp.com/materials')
@@ -51,8 +54,16 @@ const Dashboard = () => {
 
     return (
       <div>
-          <SearchFilterBar types={types} suppliers={suppliers} setFilterByID={setFilterByID} setFilterByType={setFilterByType} setFilterBySupplier={setFilterBySupplier} />
-          <StockDisplayer filteredStocks={filteredStocks.map((stock, key) => <StockRowDetail key={key} stock={stock} setNewQuantity={setNewQuantity} handleQuantitySubmit={handleQuantitySubmit} />)} />
+          <SearchFilterBar types={types} 
+                           suppliers={suppliers}
+                           setFilterByID={setFilterByID} 
+                           setFilterByType={setFilterByType} 
+                           setFilterBySupplier={setFilterBySupplier} />
+
+
+          <StockDisplayer filteredStocks={filteredStocks} 
+                          setNewQuantity={setNewQuantity} 
+                          handleQuantitySubmit={handleQuantitySubmit} />
       </div>
     );
 };
