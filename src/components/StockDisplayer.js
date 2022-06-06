@@ -5,31 +5,31 @@ import { Link } from 'react-router-dom';
 const StockDisplayer = ({ filteredStocks, setNewQuantity, handleQuantitySubmit }) => {
     return (
         <>
-            {filteredStocks.map((stock, key) => {
-                const {id, imgURL, name, type, quantity, supplier, note} = stock;
-
-
-                <React.Fragment key={key}>
-                  <h3>List of Stocks</h3>
+             <h3>List of Stocks</h3>
                 
 
-                  <table>
-                      <thead className='table-header'>
-                          <tr>
-                              <td>ID</td>
-                              <td>Image</td>
-                              <td>Name</td>
-                              <td>Type</td>
-                              <td>Quantity (max 100)</td>
-                              <td>Supplier</td>
-                              <td>In-stock</td>
-                              <td>Note</td>
-                          </tr>
-                      </thead>
+             <table>
+                 <thead className='table-header'>
+                     <tr>
+                         <td>ID</td>
+                         <td>Image</td>
+                         <td>Name</td>
+                         <td>Type</td>
+                         <td>Quantity (max 100)</td>
+                         <td>Supplier</td>
+                         <td>In-stock</td>
+                         <td>Note</td>
+                     </tr>
+                 </thead>
+
+
+                {filteredStocks.map((stock, key) => {
+                    const {id, imgURL, name, type, quantity, supplier, note} = stock;
 
 
                       <tbody>
                         <tr className='stock-table'>
+                        <React.Fragment key={key}>
                             <td>{id}</td>
                             <td>
                                 <Link to={`viewstockdetail/${id}`}>
@@ -51,13 +51,13 @@ const StockDisplayer = ({ filteredStocks, setNewQuantity, handleQuantitySubmit }
                             <td>{supplier}</td>
                             <td>{quantity > 0 ? <b>Yes</b> : <b style={{color : 'rgb(250, 0, 0)'}}>No</b>}</td>
                             <td>{note}</td>
+                        </React.Fragment>
                         </tr>
                       </tbody>
+                })}
 
 
-                  </table>
-                </React.Fragment>
-            })}
+            </table>
         </>
     );
 }
