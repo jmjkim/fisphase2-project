@@ -16,11 +16,11 @@ This is my second software engineering project at Flatiron School. Throughout th
 
 - Click the Stock Image to view detail.
 
-- Edit inventory quantity from Dashboard.
+- Edit inventory quantity on Dashboard.
 
-- In-stock status updates when stock quantity is 0.
+- In-stock status changes when stock quantity reaches 0.
 
-- Users can add memo on inventories.r
+- Users can add memo on inventories.
 
 - Stock ID is assigned to new inventory automatically.
 
