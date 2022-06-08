@@ -51,7 +51,7 @@ const RegisterForm = () => {
             <input type='text' name='note' onChange={handleRegisterChange} placeholder='Add note' autoComplete='off' />
 
             <input type='submit' value='Register' />
-            <input type='button' onClick={() => navigateTo('/')} value='Back to Dashboard' />``
+            <input type='button' onClick={() => navigateTo('/')} value='Back to Dashboard' />
         </form>
         );
     }
