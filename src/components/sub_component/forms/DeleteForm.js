@@ -32,7 +32,7 @@ const DeleteForm = () => {
 
             <StockPreview stock={stock} />
 
-            <input type='text' name='id' onChange={handleIDChange} maxLength={4} placeholder='Stock#'></input>
+            <input type='text' name='id' onChange={handleIDChange} maxLength={4} placeholder='Stock#' autoComplete='off' />
             
             <input type='submit' value='Delete'></input>
             <input type='button' onClick={() => navigateTo('/')} value='Back to Dashboard'></input>

@@ -50,16 +50,16 @@ const EditorForm = () => {
 
             <StockPreview stock={stock} />
 
-            <input type='text' name='id' onChange={handleIDChange} required={true} maxLength={4} placeholder='Stock#' />
-            <input type='text' name='name' onChange={handleEditChange} placeholder='New name' />
-            <input type='text' name='type' onChange={handleEditChange} placeholder='New stock type' />
-            <input type='number' name='quantity' min={1} max={100} onChange={handleEditChange} placeholder='New quantity' />
-            <input type='text' name='supplier' onChange={handleEditChange} placeholder='New supplier' />
-            <input type='url' name='imgURL' onChange={handleEditChange} placeholder='New image URL' />
-            <input type='text' name='note' onChange={handleEditChange} placeholder='New note' />
+            <input type='text' name='id' onChange={handleIDChange} required={true} maxLength={4} placeholder='Stock#' autoComplete='off' />
+            <input type='text' name='name' onChange={handleEditChange} placeholder='New name' autoComplete='off' />
+            <input type='text' name='type' onChange={handleEditChange} placeholder='New stock type' autoComplete='off' />
+            <input type='number' name='quantity' min={1} max={100} onChange={handleEditChange} placeholder='New quantity' autoComplete='off' />
+            <input type='text' name='supplier' onChange={handleEditChange} placeholder='New supplier' autoComplete='off' />
+            <input type='url' name='imgURL' onChange={handleEditChange} placeholder='New image URL' autoComplete='off' />
+            <input type='text' name='note' onChange={handleEditChange} placeholder='New note' autoComplete='off' />
             
             <input type='submit' value='Update' />
-            <input type='button' onClick={() => navigateTo('/')} value='Back to Dashboard'></input>
+            <input type='button' onClick={() => navigateTo('/')} value='Back to Dashboard' />
         </form>
         );
     }
