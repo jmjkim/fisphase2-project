@@ -17,8 +17,9 @@ const Dashboard = () => {
   const [filterBySupplier, setFilterBySupplier] = useState('all');
   
   
-  const types = [...stocks].map(stock => stock.type);
-  const suppliers = [...stocks].map(stock => stock.supplier);
+  const setTypes = [...new Set(stocks.map(stock => stock.type))];
+  const setSuppliers = [...new Set(stocks.map(stock => stock.supplier))];
+
   
 
   useEffect(() => {
@@ -54,8 +55,8 @@ const Dashboard = () => {
 
     return (
       <div>
-          <SearchFilterBar types={types} 
-                           suppliers={suppliers}
+          <SearchFilterBar setTypes={setTypes} 
+                           setSuppliers={setSuppliers}
                            setFilterByID={setFilterByID} 
                            setFilterByType={setFilterByType} 
                            setFilterBySupplier={setFilterBySupplier} />
