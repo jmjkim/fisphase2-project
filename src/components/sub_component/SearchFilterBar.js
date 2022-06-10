@@ -1,4 +1,4 @@
-const SearchFilterBar = ({ setTypes, setSuppliers, setFilterByID, setFilterByType, setFilterBySupplier }) => {
+const SearchFilterBar = ({ settedTypes, settedSuppliers, setFilterByID, setFilterByType, setFilterBySupplier }) => {
     return (
         <div className='search-filter-bar'>
             <label>Search By: </label>
@@ -7,12 +7,12 @@ const SearchFilterBar = ({ setTypes, setSuppliers, setFilterByID, setFilterByTyp
             <label> Filter By: </label>
             <select onChange={(e) => setFilterByType(e.target.value)}>
                 <option value='all'>All</option>
-                {setTypes.map((type, index) => <option key={index} value={type}>{type}</option>)}
+                {settedTypes.map((type, index) => <option key={index} value={type}>{type}</option>)}
             </select>
 
             <select onChange={(e) => setFilterBySupplier(e.target.value)}>
                 <option value='all'>All</option>
-                {setSuppliers.map((supplier, index) => <option key={index} value={supplier}>{supplier}</option>)}
+                {settedSuppliers.map((supplier, index) => <option key={index} value={supplier}>{supplier}</option>)}
             </select>
         </div>
     );
