@@ -17,8 +17,8 @@ const Dashboard = () => {
   const [filterBySupplier, setFilterBySupplier] = useState('all');
   
   
-  const setTypes = [...new Set(stocks.map(stock => stock.type))];
-  const setSuppliers = [...new Set(stocks.map(stock => stock.supplier))];
+  const settedTypes = [...new Set(stocks.map(stock => stock.type))];
+  const settedSuppliers = [...new Set(stocks.map(stock => stock.supplier))];
 
   
 
@@ -55,8 +55,8 @@ const Dashboard = () => {
 
     return (
       <div>
-          <SearchFilterBar setTypes={setTypes} 
-                           setSuppliers={setSuppliers}
+          <SearchFilterBar settedTypes={settedTypes} 
+                           settedSuppliers={settedSuppliers}
                            setFilterByID={setFilterByID} 
                            setFilterByType={setFilterByType} 
                            setFilterBySupplier={setFilterBySupplier} />

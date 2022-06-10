@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 const StockManagerSelector = () => {
     const navigateTo = useNavigate();
     
+    
     const handleChange = (e) => {
         if (e.target.value === 'default') return null
         if (e.target.value === 'register') navigateTo('registernewstock');
