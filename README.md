@@ -36,7 +36,6 @@ This is my second software engineering project at Flatiron School. Throughout th
 ## Contributions
 1. Flatiron School Resources.
 2. Publicly available articles, lectures, videos from the Internet.
-3. Myself
 
 
 ## Resources
