@@ -1,5 +1,6 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
+import useFetch from './sub_component/useFetch';
 import SearchFilterBar from './sub_component/SearchFilterBar';
 import StockDisplayer from './StockDisplayer';
 
@@ -8,10 +9,10 @@ const Dashboard = () => {
   document.title = 'Inventory Manager';
 
 
-  const [stocks, setStocks] = useState([]);
+  const [stocks, setStocks] = useFetch("https://fisphase2-project-database.herokuapp.com/materials");
   const [newQuantity, setNewQuantity] = useState(0);
   
-  
+
   const [filterByID, setFilterByID] = useState(0);
   const [filterByType, setFilterByType] = useState('all');
   const [filterBySupplier, setFilterBySupplier] = useState('all');
@@ -19,15 +20,6 @@ const Dashboard = () => {
   
   const settedTypes = [...new Set(stocks.map(stock => stock.type))];
   const settedSuppliers = [...new Set(stocks.map(stock => stock.supplier))];
-
-  
-
-  useEffect(() => {
-    fetch('https://fisphase2-project-database.herokuapp.com/materials')
-    .then(r => r.json())
-    .then(setStocks)
-    .catch(err => alert(err.message))
-  }, []);
 
 
   const handleQuantitySubmit = (e, targetStock) => {
@@ -53,20 +45,20 @@ const Dashboard = () => {
                                     .filter(stock => {if (filterBySupplier === stock.supplier || filterBySupplier === 'all') return true})
 
 
-    return (
-      <div>
-          <SearchFilterBar settedTypes={settedTypes} 
-                           settedSuppliers={settedSuppliers}
-                           setFilterByID={setFilterByID} 
-                           setFilterByType={setFilterByType} 
-                           setFilterBySupplier={setFilterBySupplier} />
+  return (
+    <div>
+        <SearchFilterBar settedTypes={settedTypes} 
+                         settedSuppliers={settedSuppliers}
+                         setFilterByID={setFilterByID}
+                         setFilterByType={setFilterByType} 
+                         setFilterBySupplier={setFilterBySupplier} />
 
 
-          <StockDisplayer filteredStocks={filteredStocks} 
-                          setNewQuantity={setNewQuantity} 
-                          handleQuantitySubmit={handleQuantitySubmit} />
-      </div>
-    );
+        <StockDisplayer filteredStocks={filteredStocks} 
+                        setNewQuantity={setNewQuantity} 
+                        handleQuantitySubmit={handleQuantitySubmit} />
+    </div>
+  );
 };
 
 export default Dashboard;

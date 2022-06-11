@@ -2,7 +2,7 @@ const SearchFilterBar = ({ settedTypes, settedSuppliers, setFilterByID, setFilte
     return (
         <div className='search-filter-bar'>
             <label>Search By: </label>
-            <input placeholder='Stock# (4 digits)' maxLength={4} onChange={(e) => setFilterByID(+e.target.value)} />    
+            <input placeholder='Stock# (4 digits)' maxLength={4} onChange={e => setFilterByID(+e.target.value)} />    
 
             <label> Filter By: </label>
             <select onChange={(e) => setFilterByType(e.target.value)}>

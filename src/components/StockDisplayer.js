@@ -25,7 +25,7 @@ const StockDisplayer = ({ filteredStocks, setNewQuantity, handleQuantitySubmit }
 
                <tbody>
                     {filteredStocks.map((stock, key) => {
-                        const {id, imgURL, name, type, quantity, supplier, note} = stock        
+                        const {id, imgURL, name, type, quantity, supplier, note} = stock;        
                         
                         return (
                             <React.Fragment key={key}>
