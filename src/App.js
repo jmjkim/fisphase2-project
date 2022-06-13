@@ -15,12 +15,12 @@ const App = () => {
     <>
       <NavBar />
       <Routes>
-        <Route exact path='/' element={<Dashboard />} />
-        <Route exact path='contact' element={<Contact />} />
-        <Route exact path='viewstockdetail/:stockID' element={<ViewStockDetail />} />
-        <Route exact path='registernewstock' element={<RegisterForm />} />
-        <Route exact path='editstock' element={<EditorForm />} />
-        <Route exact path='deletestock' element={<DeleteForm />} />
+        <Route path='/' element={<Dashboard />} />
+        <Route path='contact' element={<Contact />} />
+        <Route path='viewstockdetail/:stockID' element={<ViewStockDetail />} />
+        <Route path='registernewstock' element={<RegisterForm />} />
+        <Route path='editstock' element={<EditorForm />} />
+        <Route path='deletestock' element={<DeleteForm />} />
       </Routes>
     </>
   );

@@ -5,7 +5,9 @@ import StockPreview from '../StockPreview';
 
 const DeleteForm = () => {
     const navigateTo = useNavigate();
+
     const [stock, setStock] = useState(null);
+
 
     const handleIDChange = (e) => {
         fetch(`https://fisphase2-project-database.herokuapp.com/materials/${+e.target.value}`)
