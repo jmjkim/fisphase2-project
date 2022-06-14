@@ -45,7 +45,9 @@ const Dashboard = () => {
     .then(r => r.json())
     .then(setStocks(updatedStockQuantity))
     .catch(err => alert(err.message))
-  };
+    
+    e.target[0].value = '';
+   };
 
 
   const filteredStocks = [...stocks].filter(stock => (filterByID === stock.id || filterByID === 0) && true)
