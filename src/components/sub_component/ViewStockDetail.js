@@ -1,4 +1,4 @@
-import useFetch from './useFetch';
+import { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 
 
@@ -7,11 +7,17 @@ const ViewStockDetail = () => {
 
 
     const {stockID} = useParams();
-    const [stock] = useFetch(`https://fisphase2-project-database.herokuapp.com/materials/${stockID}`);
-    
-
+    const [stock, setStock] = useState([]);
     const navigateTo = useNavigate();
 
+
+    useEffect(() => {
+        fetch(`https://fisphase2-project-database.herokuapp.com/materials/${stockID}`)
+        .then(r => r.json())
+        .then(setStock)
+        .catch(err => alert(err.message))
+    }, [])
+    
     
     return (
         <>

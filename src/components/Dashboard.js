@@ -1,7 +1,6 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 
-import useFetch from './sub_component/useFetch';
 import SearchFilterBar from './sub_component/SearchFilterBar';
 import StockDisplayer from './StockDisplayer';
 
@@ -10,7 +9,7 @@ const Dashboard = () => {
   document.title = 'Inventory Manager';
 
 
-  const [stocks, setStocks] = useFetch("https://fisphase2-project-database.herokuapp.com/materials");
+  const [stocks, setStocks] = useState([]);
   const [newQuantity, setNewQuantity] = useState(0);
   
 
@@ -21,6 +20,14 @@ const Dashboard = () => {
   
   const settedTypes = [...new Set(stocks.map(stock => stock.type))];
   const settedSuppliers = [...new Set(stocks.map(stock => stock.supplier))];
+
+
+  useEffect(() => {
+    fetch("https://fisphase2-project-database.herokuapp.com/materials")
+    .then(r => r.json())
+    .then(setStocks)
+    .catch(err => alert(err.message))
+  }, [])
 
 
   const handleQuantitySubmit = (e, targetStock) => {
