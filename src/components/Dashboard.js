@@ -35,7 +35,7 @@ const Dashboard = () => {
         headers: {'Content-type': 'application/json'},
         body: JSON.stringify({quantity: newQuantity})
     })
-    .then(r => r.json())
+    // .then(r => r.json())
     .then(setStocks(updatedStockQuantity))
     .catch(err => alert(err.message))
   };
