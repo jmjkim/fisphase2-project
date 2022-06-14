@@ -37,7 +37,6 @@ const Dashboard = () => {
     })
     .then(r => r.json())
     .then(setStocks(updatedStockQuantity))
-    .then(e.target[0].value = "")
     .catch(err => alert(err.message))
   };
 
