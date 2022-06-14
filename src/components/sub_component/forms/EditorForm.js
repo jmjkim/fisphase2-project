@@ -10,13 +10,15 @@ const EditorForm = () => {
 
 
     const handleIDChange = (e) => {
-        fetch(`https://fisphase2-project-database.herokuapp.com/materials/${+e.target.value}`)
-        .then(r => r.json())
-        .then(stock => {
-            setStock(stock);
-            setFormData(stock);
-        })
-        .catch(err => alert(err.message))
+        if (+e.target.value.length === 4) {
+            fetch(`https://fisphase2-project-database.herokuapp.com/materials/${+e.target.value}`)
+            .then(r => r.json())
+            .then(stock => {
+                setStock(stock);
+                setFormData(stock);
+            })
+            .catch(err => alert(err.message))
+        }
     }   
     
 

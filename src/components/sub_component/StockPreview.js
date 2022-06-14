@@ -13,4 +13,5 @@ const StockPreview = ({ stock }) => {
     );
 }
 
+
 export default StockPreview;

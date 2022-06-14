@@ -1,15 +1,16 @@
 import useFetch from './useFetch';
 import { useNavigate, useParams } from 'react-router-dom';
 
+
 const ViewStockDetail = () => {
     document.title = 'Stock Detail';
 
 
+    const {stockID} = useParams();
     const [stock] = useFetch(`https://fisphase2-project-database.herokuapp.com/materials/${stockID}`);
     
 
     const navigateTo = useNavigate();
-    const {stockID} = useParams();
 
     
     return (
@@ -27,5 +28,6 @@ const ViewStockDetail = () => {
         </>
     );
 }
+
 
 export default ViewStockDetail;

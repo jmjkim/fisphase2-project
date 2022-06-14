@@ -1,5 +1,6 @@
 import { useState } from 'react';
 
+
 import useFetch from './sub_component/useFetch';
 import SearchFilterBar from './sub_component/SearchFilterBar';
 import StockDisplayer from './StockDisplayer';
@@ -36,13 +37,14 @@ const Dashboard = () => {
     })
     .then(r => r.json())
     .then(setStocks(updatedStockQuantity))
+    .then(e.target[0].value = "")
     .catch(err => alert(err.message))
   };
 
 
-  const filteredStocks = [...stocks].filter(stock => {if (filterByID === stock.id || filterByID === 0) return true})
-                                    .filter(stock => {if (filterByType === stock.type || filterByType === 'all') return true})
-                                    .filter(stock => {if (filterBySupplier === stock.supplier || filterBySupplier === 'all') return true})
+  const filteredStocks = [...stocks].filter(stock => (filterByID === stock.id || filterByID === 0) && true)
+                                    .filter(stock => (filterByType === stock.type || filterByType === 'all') && true)
+                                    .filter(stock => (filterBySupplier === stock.supplier || filterBySupplier === 'all') && true)
 
 
   return (
@@ -60,5 +62,6 @@ const Dashboard = () => {
     </div>
   );
 };
+
 
 export default Dashboard;
