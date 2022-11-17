@@ -49,4 +49,4 @@ This is my second software engineering project at Flatiron School. Throughout th
 4. Stock Images: Flaticon
 
 
-For any questions, feedbacks, send email at jmjkim00@icloud.com.
+For any questions, feedbacks, please send an email jmjkim00@icloud.com.
