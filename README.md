@@ -1,8 +1,10 @@
 # Inventory Manager
 
-Inventory Manager is a SPA (Single Page Application) React project for my software engineering course at Flatiron School. As title says, users can manage **(Create, Read, Update, Delete)** their inventories regardless of stock types. Additional features include searching particular item by stock ID or filtering stocks by its type or supplier.
+Inventory Manager is a SPA (Single Page Application) React project for my software engineering course at Flatiron School.<br/>
 
-**[View App demonstration](https://youtu.be/MicMKhlTQuU)**
+**[View app demonstration](https://youtu.be/MicMKhlTQuU)**
+
+- Users can manage **(Create, Read, Update, Delete)** their inventories regardless of stock types. Additional features include searching particular item by stock ID or filtering stocks by its type or supplier.
 
 > All of information used in this project is not real.
 
